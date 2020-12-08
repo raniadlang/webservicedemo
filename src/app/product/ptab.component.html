@@ -1,0 +1,18 @@
+<div>
+    <table>
+        <tr><th>product id</th><th>product name</th><th>price</th></tr>
+        <tr *ngFor="let p of parr">
+            <td>{{p.pid}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.price}}</td>
+            <td><a (click)="deleteProduct(p)">delete</a>/
+                <a (click)="updateProduct(p)">edit</a></td>
+        
+        </tr>
+    </table>
+    <button type="button" name="btn" (click)="displayForm()">Add Product</button>
+<div *ngIf="flag">
+    <pform [upob]="ob" (myevent)="parr=$event" (myevent1)="flag=$event"></pform>
+</div>
+
+</div>  
